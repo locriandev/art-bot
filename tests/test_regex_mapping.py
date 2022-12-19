@@ -4,20 +4,9 @@ from flexmock import flexmock
 
 from artbotlib.regex_mapping import map_command_to_regex
 from artbotlib.slack_output import SlackDeveloperOutput
-
+from tests.util import OutputInspector
 
 so = SlackDeveloperOutput()
-
-
-class OutputInspector:
-    def __init__(self):
-        self.output = []
-
-    def say(self, text):
-        self.output.append(text)
-
-    def reset(self):
-        self.output.clear()
 
 
 @patch('artbotlib.regex_mapping.greet_user')
