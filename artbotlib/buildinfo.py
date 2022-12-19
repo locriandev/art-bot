@@ -9,7 +9,6 @@ import koji
 
 import artbotlib.exectools
 from . import util, brew_list, constants
-from .constants import BREW_URL
 
 
 class BuildState(Enum):
